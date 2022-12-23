@@ -1,0 +1,13 @@
+version: "1.0"
+
+services:
+  app:
+    container_name: cfv-dev
+    image: cfc-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 5001:5001
